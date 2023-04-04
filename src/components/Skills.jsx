@@ -8,8 +8,8 @@ import Node from '../assests/node.png';
 import FireBase from '../assests/firebase.png';
 import AWS from '../assests/aws.png';
 import GitHib from '../assests/github.png';
-import Tailwind from '../assests/tailwind.png';
-import Mongo from '../assests/mongo.png';
+// import Tailwind from '../assests/tailwind.png';
+// import Mongo from '../assests/mongo.png';
 
 const Skills = () => {
   return (
