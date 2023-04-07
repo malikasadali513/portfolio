@@ -1,15 +1,6 @@
 import React from 'react'
 import Skills from './Skills'
-import HTML from '../assests/html.png';
-import CSS from '../assests/css.png';
-import JavaScript from '../assests/javascript.png';
-import ReactImg from '../assests/react.png';
-import Node from '../assests/node.png';
-import FireBase from '../assests/firebase.png';
-import AWS from '../assests/aws.png';
-import GitHib from '../assests/github.png';
-// import Tailwind from '../assests/tailwind.png';
-// import Mongo from '../assests/mongo.png';
+import {skillsData} from "../helpers/data"
 
 
 function MainSkills(props) {
@@ -22,55 +13,9 @@ function MainSkills(props) {
           <p className='py-4'>// These are the Technologies I've worked with</p>
       </div>
       <div className='w-full gap-4 grid grid-cols-2 sm:grid-cols-4 text-center py-8'>
-          <div className='  shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills 
-          img={HTML}
-          name='HTML'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills 
-          img={CSS}
-          name='CSS'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills 
-          img={JavaScript}
-          name='JavaScript'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills
-          img={ReactImg}
-          name='React'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills 
-          img={Node}
-          name='Node'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills
-          img={FireBase}
-          name='FireBase'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills
-          img={AWS}
-          name='AWS'
-          />
-          </div>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-          <Skills
-          img={GitHib}
-          name='GitHib'
-          />
-          </div>
-          
+          {skillsData.map((currSkill)=>(
+            <Skills img={currSkill.img} name={currSkill.name} />
+          ))}
       </div>
     </div>
   </div>
